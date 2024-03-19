@@ -1,0 +1,79 @@
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
+// Create your own map
+$custom-colors: (
+  "custom-color": #008080
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+.ui.special.cards {
+  display: flex;
+  justify-content: center;
+}
+
+.mt-6 {
+  margin-top: 1rem !important; //29rem
+  margin-bottom: rem !important;
+}
+
+.mt-7 {
+  margin-top: 6rem !important;
+}
+
+.mt-8{
+  margin-top: 5rem !important;
+}
+
+.mt-9{
+  margin-bottom: 1rem !important;
+}
+
+.mt-10{
+  margin-top: 3rem !important;
+}
+
+
+.star {
+  color: gold;
+}
+
+.text-white {
+  color: whitesmoke !important;
+}
+
+.text-black {
+  color: black !important;
+}
+
+#primerLinea{
+  background-color: #008080;
+  color: whitesmoke; 
+}
+
+.adidas-container {
+  overflow: hidden; /* Oculta cualquier contenido que desborde del contenedor */
+}
+
+.adidas-text {
+  white-space: nowrap; /* Evita que el texto se envuelva a la siguiente línea */
+  display: inline-block; /* Permite que el texto se desplace horizontalmente */
+  animation: adidas-animation 40s linear infinite; /* Aplica la animación al texto */
+}
+
+@keyframes adidas-animation {
+  0% {
+    transform: translateX(-25);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
